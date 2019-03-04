@@ -1,0 +1,13 @@
+{
+  "name": "weapp-movies",
+  "version": "1.0.0",
+  "description": "马达电影小程序",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [
+    "weapp",
+    "movies"
+  ],
+  "author": "cy920820",
+  "license": "MIT"
+}

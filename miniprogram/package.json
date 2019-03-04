@@ -1,0 +1,11 @@
+{
+  "name": "miniprogram",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {},
+  "author": "cy920820",
+  "dependencies": {
+    "vant-weapp": "^0.5.6"
+  }
+}
