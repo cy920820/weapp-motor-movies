@@ -1,4 +1,4 @@
-//app.js revert
+//app.js
 App({
   onLaunch: function () {
 
