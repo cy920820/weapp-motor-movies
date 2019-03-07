@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/profile/index",
-    "pages/list/index"
+    "pages/list/index",
+    "pages/detail/index"
   ],
 
   "window": {
@@ -48,7 +49,8 @@
     "van-cell": "./miniprogram_npm/vant-weapp/cell/index",
     "van-cell-group": "./miniprogram_npm/vant-weapp/cell-group/index",
     "van-loading": "./miniprogram_npm/vant-weapp/loading/index",
-    "van-dialog": "./miniprogram_npm/vant-weapp/dialog/index"
+    "van-dialog": "./miniprogram_npm/vant-weapp/dialog/index",
+    "van-icon": "./miniprogram_npm/vant-weapp/icon/index"
   },
 
   "permission": {

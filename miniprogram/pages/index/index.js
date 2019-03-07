@@ -27,7 +27,9 @@ Page({
 
   viewDetail(event) {
     let id = event.currentTarget.id
-    console.log(id)
+    wx.navigateTo({
+      url: `../detail/index?id=${id}`
+    })
   },
 
   // 获取热映列表

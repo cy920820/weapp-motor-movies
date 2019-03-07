@@ -1,32 +1,36 @@
-// pages/storageConsole/storageConsole.js
-
+import { getMovieDetail } from '../../services/services'
 const app = getApp()
 
 Page({
 
   data: {
-    fileID: '',
-    cloudPath: '',
-    imagePath: '',
+    detail: {}
   },
 
-  onLoad: function (options) {
+  watchTrailer() {
+    console.log('watch')
+  },
 
-    const {
-      fileID,
-      cloudPath,
-      imagePath,
-    } = app.globalData
-
+  onLoad(options) {
+    // let id = options.id
+    let detail = wx.getStorageSync('detail')
     this.setData({
-      fileID,
-      cloudPath,
-      imagePath,
+      detail
     })
+    // wx.showLoading({
+    //   title: '加载中'
+    // })
 
-    console.group('文件存储文档')
-    console.log('https://developers.weixin.qq.com/miniprogram/dev/wxcloud/guide/storage.html')
-    console.groupEnd()
-  },
-
+    // getMovieDetail(id).then(res => {
+    //   wx.hideLoading()
+    //   let detail = res.data
+    //   this.setData({
+    //     detail
+    //   })
+    // })
+    // .catch(err => {
+    //   wx.hideLoading()
+    //   console.error(err)
+    // })
+  }
 })

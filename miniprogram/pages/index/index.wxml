@@ -1,7 +1,5 @@
 <!--index.wxml-->
 <view class="container">
-  <view></view>
-  <text></text>
   <!-- 顶部tabbar -->
   <view class="tabs">
     <van-tabs bind:click="changTab" swipeable>
@@ -17,7 +15,7 @@
               <!-- 电影名称 -->
               <view class="title">
                 <text>{{item.title}}</text>
-                <text class="rating">{{item.rating.average}}</text>
+                <text class="rating">豆瓣评分：{{item.rating.average}}</text>
               </view>
 
               <!-- 观看量 -->
@@ -56,7 +54,7 @@
               </wxs>
 
               <!-- 主演 -->
-              <view class="casts">主演：{{m1.starrings(item.casts)}}</view>
+              <view class="casts ellipsis">主演：{{m1.starrings(item.casts)}}</view>
 
               <!-- 大陆上映时间 -->
               <view class="mainland_pubdate">

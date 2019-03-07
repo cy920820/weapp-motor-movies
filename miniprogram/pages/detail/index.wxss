@@ -2,6 +2,152 @@
 
 @import "../../style/guide.wxss";
 
-.black {
-  color: black;
+.details-panel {
+  width: 100%;
+  height: 376rpx;
+  position: relative;
+  cursor: pointer;
 }
+
+.details-panel .movie-filter {
+  position: absolute;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+}
+
+.details-panel .panel-bg {
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  overflow: hidden;
+  position: absolute;
+  filter: blur(1.2rem);
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: .55;
+}
+
+.details-panel .main {
+  display: flex;
+  height: 300rpx;
+  padding: 38rpx 60rpx 38rpx 30rpx;
+}
+
+.main .image image {
+  width: 110px;
+  height: 150px;
+  box-sizing: border-box;
+}
+
+.describe {
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  margin-left: 25rpx;
+  line-height: 1;
+  color: #fff;
+  flex: 1;
+}
+
+.name-cn {
+  font-size: 40rpx;
+  margin-top: 8rpx;
+  font-weight: 700;
+}
+
+.name-en {
+  margin-top: 20rpx;
+  font-size: 24rpx;
+  color: #fff;
+  opacity: .8;
+}
+
+.wish-count {
+  font-size: 28rpx;
+  font-weight: 700;
+  color: #fc0;
+}
+
+.douban-rating {
+  font-size: 20rpx;
+  font-weight: 700;
+  color: #fc0;
+  margin-left: 10rpx;
+}
+
+.genres {
+  margin-top: 20rpx;
+  font-size: 24rpx;
+  color: #fff;
+  opacity: .8;
+}
+
+.length {
+  margin-top: 20rpx;
+  font-size: 24rpx;
+  color: #fff;
+  opacity: .8;
+}
+
+.pubdate {
+  margin-top: 20rpx;
+  font-size: 24rpx;
+  color: #fff;
+  opacity: .8;
+}
+
+.panel {
+  width: 100%;
+  margin-bottom: 20rpx;
+}
+
+.actors {
+  width: 100%;
+  background: #fff;
+  padding: 30rpx 0 10rpx 0;
+  box-sizing: border-box;
+}
+
+.actors .title {
+  font-size: 28rpx;
+  margin-left: 30rpx;
+}
+
+.actor {
+  display: inline-block;
+  padding: 0 3rpx;
+  margin-right: 8rpx;
+  text-align: center;
+}
+
+.actor:first-child {
+  margin-left: 30rpx;
+}
+
+.actor:last-child {
+  margin-right: 30rpx;
+}
+
+
+.actor .avatar {
+  display: block;
+  width: 130rpx;
+  height: 180rpx;
+}
+
+.actor .name-en {
+  display: block;
+  width: 133rpx;
+  font-size: 24rpx;
+  color: #000;
+}
+
+.actor .name-cn {
+  display: block;
+  width: 133rpx;
+  font-size: 22rpx;
+  color: #999;
+}
+

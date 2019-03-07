@@ -1,29 +1,62 @@
 <!--pages/storageConsole/storageConsole.wxml-->
-<view class="container">
+<wxs module="m1">
+  // 不可使用es6语法
+  var genres = function (genres) {
+    return genres.join(',')
+  }
 
-  <view class="list">
-    <view class="list-item" bindtap="testCgi">
-      <text class="black">上传成功</text>
-    </view>
-    <view class="list-item">
-      <text class="request-text">文件 ID：{{fileID}}</text>
-    </view>
-    <view class="list-item">
-      <text class="request-text">云文件路径：{{cloudPath}}</text>
-    </view>
-    <view class="list-item">
-      <image class="image1" src="{{imagePath}}" mode="aspectFit"></image>
+  var avatars = function (directors, casts) {
+    console.log(directors)
+    return directors.concat(casts)
+  }
+
+  module.exports.genres = genres
+  module.exports.avatars = avatars
+</wxs>
+
+<view class="container" wx:if="{{detail.title}}">
+  <view></view>
+  <text></text>
+  <view class="details-panel">
+    <view class="movie-filter"></view>
+    <view class="panel-bg" style="background-image: url({{detail.images.large}})"></view>
+    <view class="main">
+      <view class="image" bindtap="watchTrailer">
+        <image src="{{detail.images.large}}"></image>
+      </view>
+      <view class="describe">
+        <view class="name-cn ellipsis">{{detail.title}}<text class="douban-rating ellipsis">豆瓣评分：{{detail.rating.average}}</text></view>
+        <text class="name-en ellipsis">{{detail.original_title}}</text>
+        <view class="ellipsis" style="margin-top: 22rpx;">
+          <text class="wish-count ellipsis">{{detail.wish_count}}人想看</text>
+        </view>
+        <text class="genres ellipsis">{{m1.genres(detail.genres)}}</text>
+        <text class="length ellipsis">{{detail.countries[0]}}/{{detail.durations[0]}}</text>
+        <text class="pubdate ellipsis">{{detail.pubdate}} 大陆上映</text>
+      </view>
     </view>
   </view>
 
-  <view class="guide">
-    <!-- <image class="image1" src="{{imagePath}}" mode="aspectFit"></image> -->
-    <text class="headline">云开发控制台中管理文件</text>
-    <text class="p">1. 打开云开发控制台</text>
-    <image class="image1" src="../../images/console-entrance.png" mode="aspectFit"></image>
-    <text class="p">2. 切换到文件管理标签页</text>
-    <text class="p">3. 可查看文件列表、管理权限</text>
-    <text class="p">4. 详细的教程和 API 文件，可点击调试器中打印的链接查看</text>
+  <!-- 简介 -->
+  <view class="panel">
+    <panel summary="{{detail.summary}}"></panel>
+  </view>
+
+  <!-- 演员表 -->
+  <view class="actors">
+    <text class="title">演职人员</text>
+    <scroll-view scroll-x="true" style="white-space: nowrap; display: flex; margin-top: 20rpx;">
+      <view class="actor" wx:key="index" wx:for="{{m1.avatars(detail.directors, detail.casts)}}">
+        <image class="avatar" src="{{item.avatars.large}}"></image>
+        <text class="name-en ellipsis">{{item.name_en}}</text>
+        <text class="name-cn ellipsis">{{item.name}}</text>
+      </view>
+      <view class="actor" wx:key="index" wx:for="{{m1.avatars(detail.directors, detail.casts)}}">
+        <image class="avatar" src="{{item.avatars.large}}"></image>
+        <text class="name-en ellipsis">{{item.name_en}}</text>
+        <text class="name-cn ellipsis">{{item.name}}</text>
+      </view>
+    </scroll-view>
   </view>
 
 </view>

@@ -2,7 +2,7 @@
   position: relative;
   margin-top: 0!important;
   padding: 30rpx 30rpx 0;
-  transition: all .2s ease-out;
+  background: #fff;
 }
 
 .collapse .summary {
@@ -10,12 +10,12 @@
   line-height: 40rpx;
   overflow: hidden;
   text-overflow: ellipsis;
-  transition: all .2s ease-out;
 }
 
 .summary text {
   font-size: 30rpx;
   line-height: 40rpx;
+  color: #555;
 }
 
 .collapse-btn {

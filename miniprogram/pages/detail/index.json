@@ -1,3 +1,6 @@
 {
-  "navigationBarTitleText": "文件存储指引"
+  "navigationBarTitleText": "影片详情",
+  "usingComponents": {
+    "panel": "../../components/collapse-panel/index"
+  }
 }
