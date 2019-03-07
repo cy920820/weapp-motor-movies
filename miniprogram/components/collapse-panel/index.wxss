@@ -1,0 +1,30 @@
+.collapse {
+  position: relative;
+  margin-top: 0!important;
+  padding: 30rpx 30rpx 0;
+  transition: all .2s ease-out;
+}
+
+.collapse .summary {
+  max-height: 130rpx;
+  line-height: 40rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: all .2s ease-out;
+}
+
+.summary text {
+  font-size: 30rpx;
+  line-height: 40rpx;
+}
+
+.collapse-btn {
+  height: 44rpx;
+  text-align: center;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.open .summary {
+  max-height: 10000rpx !important;
+}

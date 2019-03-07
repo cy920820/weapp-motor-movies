@@ -1,0 +1,9 @@
+<view class="collapse {{isClose ? '': 'open' }}" bindtap="collapse">
+  <view class="summary">
+    <text>{{summary}}</text>
+  </view>
+  <view class="collapse-btn">
+    <van-icon wx:if="{{!isClose}}" name="arrow-up" />
+    <van-icon name="arrow-down" wx:if="{{isClose}}" />
+  </view>
+</view>
