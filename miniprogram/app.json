@@ -1,18 +1,64 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/userConsole/userConsole",
-    "pages/storageConsole/storageConsole",
-    "pages/databaseGuide/databaseGuide",
-    "pages/addFunction/addFunction",
-    "pages/deployFunctions/deployFunctions",
-    "pages/chooseLib/chooseLib"
+    "pages/profile/index",
+    "pages/list/index"
   ],
+
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarBackgroundColor": "#dc3c38",
     "navigationBarTitleText": "The Motor Movies",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "white"
+  },
+
+  "tabBar": {
+    "color": "#696969",
+    "selectedColor": "#f03d37",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "./images/movies.png",
+        "selectedIconPath": "./images/movies_active.png",
+        "text": "院线"
+      },
+      {
+        "pagePath": "pages/list/index",
+        "iconPath": "./images/list.png",
+        "selectedIconPath": "./images/list_active.png",
+        "text": "豆瓣榜单"
+      },
+      {
+        "pagePath": "pages/profile/index",
+        "iconPath": "./images/profile.png",
+        "selectedIconPath": "./images/profile_active.png",
+        "text": "我的"
+      }
+    ]
+  },
+
+  "usingComponents": {
+    "van-button": "./miniprogram_npm/vant-weapp/button/index",
+    "van-toast": "./miniprogram_npm/vant-weapp/toast/index",
+    "van-tab": "./miniprogram_npm/vant-weapp/tab/index",
+    "van-tabs": "./miniprogram_npm/vant-weapp/tabs/index",
+    "van-cell": "./miniprogram_npm/vant-weapp/cell/index",
+    "van-cell-group": "./miniprogram_npm/vant-weapp/cell-group/index",
+    "van-loading": "./miniprogram_npm/vant-weapp/loading/index",
+    "van-dialog": "./miniprogram_npm/vant-weapp/dialog/index"
+  },
+
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
   }
 }
