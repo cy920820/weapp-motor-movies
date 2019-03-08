@@ -43,7 +43,7 @@
   </view>
 
   <!-- 演员表 -->
-  <view class="actors">
+  <view class="detail-item actors">
     <text class="title">演职人员</text>
     <scroll-view scroll-x="true" style="white-space: nowrap; display: flex; margin-top: 20rpx;">
       <view class="actor" wx:key="index" wx:for="{{m1.avatars(detail.directors, detail.casts)}}">
@@ -51,12 +51,24 @@
         <text class="name-en ellipsis">{{item.name_en}}</text>
         <text class="name-cn ellipsis">{{item.name}}</text>
       </view>
-      <view class="actor" wx:key="index" wx:for="{{m1.avatars(detail.directors, detail.casts)}}">
-        <image class="avatar" src="{{item.avatars.large}}"></image>
-        <text class="name-en ellipsis">{{item.name_en}}</text>
-        <text class="name-cn ellipsis">{{item.name}}</text>
+    </scroll-view>
+  </view>
+
+  <!-- 视频和剧照 -->
+  <view class="detail-item media">
+    <text class="title">视频和剧照</text>
+    <scroll-view scroll-x="true" style="white-space: nowrap; display: flex; margin-top: 20rpx;">
+      <!-- <video wx:key="index" wx:for="{{detail.trailers}}" src="{{item.resource_url}}" controls></video> -->
+      <view class="actor" wx:key="index" wx:for="{{detail.photos}}">
+        <image mode="aspectFill" class="still" src="{{item.thumb}}"></image>
       </view>
     </scroll-view>
+  </view>
+
+  <!-- 观众评论 -->
+  <view class="detail-item discuss">
+    <text class="title">观众评论</text>
+    <view></view>
   </view>
 
 </view>

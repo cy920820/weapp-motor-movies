@@ -16,13 +16,13 @@ Page({
   },
 
   onLoad() {
-    this.setData({
-      hit: wx.getStorageSync('hits'),
-      upcoming: wx.getStorageSync('upcomings')
-    })
+    // this.setData({
+    //   hit: wx.getStorageSync('hits'),
+    //   upcoming: wx.getStorageSync('upcomings')
+    // })
 
-    // this.getHitList(this.data.hitPage, this.data.size)
-    // this.getUpcomings(this.data.upcomingPage, this.data.size)
+    this.getHitList(this.data.hitPage, this.data.size)
+    this.getUpcomings(this.data.upcomingPage, this.data.size)
   },
 
   viewDetail(event) {

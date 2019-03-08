@@ -103,14 +103,14 @@
   margin-bottom: 20rpx;
 }
 
-.actors {
+.detail-item {
   width: 100%;
   background: #fff;
   padding: 30rpx 0 10rpx 0;
   box-sizing: border-box;
 }
 
-.actors .title {
+.detail-item .title {
   font-size: 28rpx;
   margin-left: 30rpx;
 }
@@ -149,5 +149,19 @@
   width: 133rpx;
   font-size: 22rpx;
   color: #999;
+}
+
+.media {
+  margin-top: 22rpx;
+}
+
+.media .still {
+  width: 180rpx;
+  height: 140rpx;
+}
+
+.discuss {
+  margin-top: 22rpx;
+  margin-bottom: 50rpx;
 }
 

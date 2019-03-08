@@ -2,13 +2,13 @@
 	"miniprogramRoot": "miniprogram/",
 	"cloudfunctionRoot": "cloudfunctions/",
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
-		"autoAudits": false,
-		"nodeModules": true
+		"nodeModules": true,
+		"autoAudits": false
 	},
 	"appid": "wxc7e2f9f891b0274c",
 	"projectname": "weapp-movies",
@@ -30,12 +30,19 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 1,
 			"list": [
 				{
 					"id": -1,
 					"name": "db guide",
-					"pathName": "pages/databaseGuide/databaseGuide"
+					"pathName": "pages/databaseGuide/databaseGuide",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "影片详情",
+					"pathName": "pages/detail/index",
+					"scene": null
 				}
 			]
 		}

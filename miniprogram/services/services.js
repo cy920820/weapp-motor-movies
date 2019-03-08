@@ -15,5 +15,5 @@ exports.getUpcomings = function(params) {
 // 获取具体id电影条目
 
 exports.getMovieDetail = function(params) {
-  return http(`${apis.coming_soon}/${params}`, 'GET')
+  return http(`${apis.subject}/${params}`, 'GET')
 }
