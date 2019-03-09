@@ -59,7 +59,7 @@
     <text class="title">视频和剧照</text>
     <scroll-view scroll-x="true" style="white-space: nowrap; display: flex; margin-top: 20rpx;">
       <!-- <video wx:key="index" wx:for="{{detail.trailers}}" src="{{item.resource_url}}" controls></video> -->
-      <view class="actor" wx:key="index" wx:for="{{detail.photos}}">
+      <view bind:tap="preview" class="actor" wx:key="index" wx:for="{{detail.photos}}">
         <image mode="aspectFill" class="still" src="{{item.thumb}}"></image>
       </view>
     </scroll-view>
@@ -67,8 +67,25 @@
 
   <!-- 观众评论 -->
   <view class="detail-item discuss">
-    <text class="title">观众评论</text>
-    <view></view>
+    <text class="title">精彩影评</text>
+    <view class="discuss-list">
+      <view wx:for="{{detail.popular_comments}}" wx:key="index" class="discuss-item">
+        <view class="avatar"><image src="{{item.author.avatar}}"></image></view>
+        <view class="content">
+          <view class="user">
+            <text class="name">{{item.author.name}}</text>
+            <text class="signature">{{item.author.signature}}</text>
+          </view>
+          <view class="comment">
+            <text>{{item.content}}</text>
+          </view>
+          <view class="time">
+            <text>{{item.created_at}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
   </view>
-
 </view>
+
+<view class="detail-tips">暂无更多了</view>
