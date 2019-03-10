@@ -1,5 +1,5 @@
 /**index.wxss**/
-@import '../../style/guide.wxss';
+@import '../../style/common.wxss';
 
 .tabs {
   width: 100%;

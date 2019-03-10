@@ -1,6 +1,6 @@
 /* pages/userConsole/userConsole.wxss */
 
-@import "../../style/guide.wxss";
+@import "../../style/common.wxss";
 
 .userinfo {
   display: flex;

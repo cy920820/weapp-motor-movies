@@ -1,6 +1,6 @@
 /* pages/storageConsole/storageConsole.wxss */
 
-@import "../../style/guide.wxss";
+@import "../../style/common.wxss";
 
 .details-panel {
   width: 100%;

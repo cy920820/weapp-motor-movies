@@ -6,7 +6,7 @@
 }
 
 .collapse .summary {
-  max-height: 130rpx;
+  max-height: 120rpx;
   line-height: 40rpx;
   overflow: hidden;
   text-overflow: ellipsis;

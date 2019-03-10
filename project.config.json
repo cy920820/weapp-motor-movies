@@ -34,12 +34,6 @@
 			"list": [
 				{
 					"id": -1,
-					"name": "db guide",
-					"pathName": "pages/databaseGuide/databaseGuide",
-					"query": ""
-				},
-				{
-					"id": -1,
 					"name": "影片详情",
 					"pathName": "pages/detail/index",
 					"query": "",
@@ -50,7 +44,21 @@
 					"name": "豆瓣榜单",
 					"pathName": "pages/list/index",
 					"scene": null
-				}
+        },
+        {
+          "id": -1,
+          "name": "我的",
+          "pathName": "pages/profile/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "院线",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        }
 			]
 		}
 	}

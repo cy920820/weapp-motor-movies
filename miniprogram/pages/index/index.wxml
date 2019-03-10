@@ -20,7 +20,7 @@
 
               <!-- 观看量 -->
               <view class="collect_count">
-                <text>{{item.collect_count}}</text>观看过
+                <text>{{item.collect_count}}</text>人观看过
               </view>
 
               <!-- 15 -->
@@ -82,7 +82,7 @@
 
               <!-- 观看量 -->
               <view class="collect_count">
-                <text>{{item.collect_count}}</text>观看过
+                <text>{{item.collect_count}}</text>人观看过
               </view>
 
               <!-- weixin script -->
@@ -102,7 +102,7 @@
               </wxs>
 
               <!-- 主演 -->
-              <view class="casts">主演：{{m1.starrings(item.casts)}}</view>
+              <view class="casts ellipsis">主演：{{m1.starrings(item.casts)}}</view>
 
               <!-- 大陆上映时间 -->
               <view class="mainland_pubdate">
