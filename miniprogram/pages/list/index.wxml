@@ -1,18 +1,18 @@
 <!-- pages/chooseLib/chooseLib.wxml -->
 <view class="container">
   <view class="list-search" style="width: 100%;">
-    <van-search placeholder="请输入电影名称" show-action bind:focus="onFocus" />
+    <van-search placeholder="请输入电影名称" bind:focus="onFocus" />
   </view>
 
   <view wx:if="{{new.length}}" style="width: 100%;">
     <!-- 新片榜 -->
     <list list="{{new}}" title="新片榜">
-      <view class="view-more">查看全部排行榜</view>
+      <view class="view-more" bindtap="viewAllList" data-type="new">查看全部排行榜</view>
     </list>
 
     <!-- 豆瓣Top250 -->
     <list list="{{top250}}" title="Top250">
-      <view class="view-more">查看全部排行榜</view>
+      <view class="view-more" bindtap="viewAllList" data-type="top250">查看全部排行榜</view>
     </list>
   </view>
 </view>

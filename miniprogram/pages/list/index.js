@@ -48,4 +48,13 @@ Page({
       url: `../detail/index?id=${id}`
     })
   },
+
+  viewAllList(options) {
+    // type判断排行榜类型
+    console.log(options)
+    let type = options.currentTarget.dataset.type
+    wx.navigateTo({
+      url: `../all-list/index?type=${type}`
+    })
+  }
 })

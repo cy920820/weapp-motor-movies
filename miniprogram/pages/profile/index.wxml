@@ -7,11 +7,11 @@
   </view>
 
   <!-- 用户功能列表 -->
-  <view class="user-feature">
+  <!-- <view class="user-feature">
     <van-cell-group>
       <van-cell title="想看的电影" value="{{numbers}}" is-link />
     </van-cell-group>
-  </view>
+  </view> -->
 
   <!-- 应用信息 -->
   <view class="app-info">

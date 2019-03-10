@@ -19,10 +19,10 @@ exports.getMovieDetail = function(params) {
 
 // 获取新片榜列表
 exports.getNewMovies = function(params) {
-  return http(apis.new_movies, 'GET')
+  return http(apis.new_movies, 'GET', params)
 }
 
 // 获取具体id电影条目
 exports.getTop250 = function(params) {
-  return http(apis.top250, 'GET')
+  return http(apis.top250, 'GET', params)
 }

@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/profile/index",
     "pages/list/index",
-    "pages/detail/index"
+    "pages/detail/index",
+    "pages/all-list/index"
   ],
 
   "window": {

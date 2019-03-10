@@ -67,7 +67,7 @@
 
       <!-- 即将上映电影列表 -->
       <van-tab title="即将上映">
-        <view wx:for="{{upcoming}}" wx:key="index" class="movie-item">
+        <view wx:for="{{upcoming}}" wx:key="index" class="movie-item" id="{{item.id}}" bindtap="viewDetail">
           <view class="item-l">
             <image src="{{item.images.small}}"></image>
           </view>

@@ -1,6 +1,6 @@
 <!-- 新片榜 -->
 <view class="list-movie">
-  <view class="sub-title">{{title}}</view>
+  <view class="sub-title" wx:if="{{title}}">{{title}}</view>
   <view class="list-movie-wrapper">
     <view wx:for="{{list}}" wx:key="index" class="movie-item" id="{{item.id}}" bindtap="viewDetail">
       <view class="item-l">
@@ -12,7 +12,7 @@
           <!-- 电影名称 -->
           <view class="title">
             <text>{{item.title}}</text>
-            <text class="rating">豆瓣评分：{{item.rating.average}}</text>
+            <text class="rating ellipsis">豆瓣评分：{{item.rating.average}}</text>
           </view>
           <!-- 观看量 -->
           <view class="collect_count">
@@ -35,9 +35,9 @@
             module.exports.starrings = starrings
           </wxs>
           <!-- 主演 -->
-          <view class="casts">主演：{{m1.starrings(item.casts)}}</view>
+          <view class="casts ellipsis">主演：{{m1.starrings(item.casts)}}</view>
           <!-- 大陆上映时间 -->
-          <view class="mainland_pubdate">
+          <view class="mainland_pubdate ellipsis">
             <text>{{item.mainland_pubdate}}</text>
           </view>
         </view>

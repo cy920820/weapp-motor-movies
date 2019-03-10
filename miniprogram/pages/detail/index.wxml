@@ -1,4 +1,4 @@
-<!--pages/storageConsole/storageConsole.wxml-->
+<!-- pages/storageConsole/storageConsole.wxml -->
 <wxs module="m1">
   // 不可使用es6语法
   var genres = function (genres) {
@@ -13,7 +13,6 @@
   module.exports.genres = genres
   module.exports.avatars = avatars
 </wxs>
-
 <view class="container" wx:if="{{detail.title}}">
   <view></view>
   <text></text>
@@ -25,7 +24,10 @@
         <image src="{{detail.images.large}}"></image>
       </view>
       <view class="describe">
-        <view class="name-cn ellipsis">{{detail.title}}<text class="douban-rating ellipsis">豆瓣评分：{{detail.rating.average}}</text></view>
+        <view class="name-cn ellipsis">
+          {{detail.title}}
+          <text class="douban-rating ellipsis">豆瓣评分：{{detail.rating.average}}</text>
+        </view>
         <text class="name-en ellipsis">{{detail.original_title}}</text>
         <view class="ellipsis" style="margin-top: 22rpx;">
           <text class="wish-count ellipsis">{{detail.wish_count}}人想看</text>
@@ -36,24 +38,21 @@
       </view>
     </view>
   </view>
-
   <!-- 简介 -->
   <view class="panel">
     <panel summary="{{detail.summary}}"></panel>
   </view>
-
   <!-- 演员表 -->
   <view class="detail-item actors">
     <text class="title">演职人员</text>
     <scroll-view scroll-x="true" style="white-space: nowrap; display: flex; margin-top: 20rpx;">
       <view class="actor" wx:key="index" wx:for="{{m1.avatars(detail.directors, detail.casts)}}">
         <image class="avatar" src="{{item.avatars.large}}"></image>
-        <text class="name-en ellipsis">{{item.name_en}}</text>
+        <text class="name-en ellipsis">{{item.name_en || item.name}}</text>
         <text class="name-cn ellipsis">{{item.name}}</text>
       </view>
     </scroll-view>
   </view>
-
   <!-- 视频和剧照 -->
   <view class="detail-item media">
     <text class="title">视频和剧照</text>
@@ -64,13 +63,14 @@
       </view>
     </scroll-view>
   </view>
-
   <!-- 观众评论 -->
   <view class="detail-item discuss">
     <text class="title">精彩影评</text>
     <view class="discuss-list">
       <view wx:for="{{detail.popular_comments}}" wx:key="index" class="discuss-item">
-        <view class="avatar"><image src="{{item.author.avatar}}"></image></view>
+        <view class="avatar">
+          <image src="{{item.author.avatar}}"></image>
+        </view>
         <view class="content">
           <view class="user">
             <text class="name">{{item.author.name}}</text>
@@ -86,6 +86,5 @@
       </view>
     </view>
   </view>
+  <view class="detail-tips">暂无更多了</view>
 </view>
-
-<view class="detail-tips">暂无更多了</view>

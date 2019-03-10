@@ -37,5 +37,5 @@
 
 .app-info {
   width: 100%;
-  margin-top: 40rpx;
+  margin-top: 30rpx;
 }
