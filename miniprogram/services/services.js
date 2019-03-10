@@ -13,7 +13,16 @@ exports.getUpcomings = function(params) {
 }
 
 // 获取具体id电影条目
-
 exports.getMovieDetail = function(params) {
   return http(`${apis.subject}/${params}`, 'GET')
+}
+
+// 获取新片榜列表
+exports.getNewMovies = function(params) {
+  return http(apis.new_movies, 'GET')
+}
+
+// 获取具体id电影条目
+exports.getTop250 = function(params) {
+  return http(apis.top250, 'GET')
 }

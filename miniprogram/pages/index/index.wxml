@@ -77,7 +77,7 @@
               <!-- 电影名称 -->
               <view class="title">
                 <text>{{item.title}}</text>
-                <!-- <text class="rating">{{item.rating.average}}</text> -->
+                <text class="rating">豆瓣评分：{{item.rating.average}}</text>
               </view>
 
               <!-- 观看量 -->

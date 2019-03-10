@@ -1,0 +1,12 @@
+<!--pages/chooseLib/chooseLib.wxml-->
+<view class="container">
+  <view class="list-search">
+    <van-search
+      placeholder="请输入电影名称"
+      show-action
+      bind:search="onSearch"
+    />
+  </view>
+
+</view>
+

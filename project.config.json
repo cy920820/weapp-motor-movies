@@ -30,7 +30,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 2,
 			"list": [
 				{
 					"id": -1,
@@ -42,6 +42,13 @@
 					"id": -1,
 					"name": "影片详情",
 					"pathName": "pages/detail/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "豆瓣榜单",
+					"pathName": "pages/list/index",
 					"scene": null
 				}
 			]

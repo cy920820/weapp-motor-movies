@@ -40,12 +40,5 @@ Page({
 
   onFocus() {
     console.log('跳转搜索页面')
-  },
-
-  viewDetail(event) {
-    let id = event.currentTarget.id
-    wx.navigateTo({
-      url: `../detail/index?id=${id}`
-    })
-  },
+  }
 })

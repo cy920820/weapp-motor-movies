@@ -9,7 +9,7 @@
     <view class="list-movie new">
       <view class="sub-title">新片榜</view>
       <view class="list-movie-wrapper">
-        <view wx:for="{{new}}" wx:key="index" class="movie-item" id="{{item.id}}" bindtap="viewDetail">
+        <view wx:for="{{new}}" wx:key="index" class="movie-item">
           <view class="item-l">
             <image src="{{item.images.small}}"></image>
           </view>
@@ -58,7 +58,7 @@
     <view class="list-movie top">
       <view class="sub-title">Top250</view>
       <view class="list-movie-wrapper">
-        <view wx:for="{{top250}}" wx:key="index" class="movie-item" id="{{item.id}}" bindtap="viewDetail">
+        <view wx:for="{{top250}}" wx:key="index" class="movie-item">
           <view class="item-l">
             <image src="{{item.images.small}}"></image>
           </view>
