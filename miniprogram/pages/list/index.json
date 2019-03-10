@@ -1,3 +1,6 @@
 {
-  "navigationBarTitleText": "豆瓣榜单"
+  "navigationBarTitleText": "豆瓣榜单",
+  "usingComponents": {
+    "list": "../../components/list/index"
+  }
 }

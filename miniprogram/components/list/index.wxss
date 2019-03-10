@@ -1,0 +1,17 @@
+@import '../../pages/index/index.wxss';
+
+.list-movie {
+  width: 100%;
+  background: #fff;
+}
+
+.list-movie .sub-title {
+  font-size: 30rpx;
+  color: #999;
+  padding: 18rpx 30rpx;
+}
+
+.list-movie .list-movie-wrapper {
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+}

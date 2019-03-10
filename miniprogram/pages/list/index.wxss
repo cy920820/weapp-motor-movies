@@ -1,33 +1,12 @@
 /* pages/chooseLib/chooseLib.wxss */
 
 @import "../../style/guide.wxss";
-@import '../../pages/index/index.wxss';
 
-.list-movie {
-  width: 100%;
-  background: #fff;
-}
-
-.list-movie .sub-title {
-  font-size: 30rpx;
-  color: #999;
-  padding: 18rpx 30rpx;
-}
-
-.list-movie .list-movie-wrapper {
-  border-top: 1px solid #e6e6e6;
-  border-bottom: 1px solid #e6e6e6;
-}
-
-.list-movie .view-more {
+.view-more {
   text-align: center;
   line-height: 44px;
   height: 44px;
   font-size: 15px;
   color: #ef4238;
-}
-
-.top {
-  margin-top: 20rpx;
   margin-bottom: 25rpx;
 }

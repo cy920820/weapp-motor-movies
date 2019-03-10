@@ -6,101 +6,13 @@
 
   <view wx:if="{{new.length}}" style="width: 100%;">
     <!-- 新片榜 -->
-    <view class="list-movie new">
-      <view class="sub-title">新片榜</view>
-      <view class="list-movie-wrapper">
-        <view wx:for="{{new}}" wx:key="index" class="movie-item" id="{{item.id}}" bindtap="viewDetail">
-          <view class="item-l">
-            <image src="{{item.images.small}}"></image>
-          </view>
-          <!-- 17 -->
-          <view class="item-r">
-            <view class="item-r-detail">
-              <!-- 电影名称 -->
-              <view class="title">
-                <text>{{item.title}}</text>
-                <text class="rating">豆瓣评分：{{item.rating.average}}</text>
-              </view>
-              <!-- 观看量 -->
-              <view class="collect_count">
-                <text>{{item.collect_count}}</text>
-                观看过
-              </view>
-              <!-- weixin script -->
-              <wxs module="m1">
-                var starrings = function (casts) {
-                  casts = casts.map(function(cast, index) {
-                    if (casts.length - 1 !== index) {
-                      return cast.name + ' '
-                    } else {
-                      return cast.name
-                    }
-                  })
-
-                  return casts.join('')
-                }
-                module.exports.starrings = starrings
-              </wxs>
-              <!-- 主演 -->
-              <view class="casts">主演：{{m1.starrings(item.casts)}}</view>
-              <!-- 大陆上映时间 -->
-              <view class="mainland_pubdate">
-                <text>{{item.mainland_pubdate}}</text>
-              </view>
-            </view>
-          </view>
-        </view>
-      </view>
+    <list list="{{new}}" title="新片榜">
       <view class="view-more">查看全部排行榜</view>
-    </view>
+    </list>
 
     <!-- 豆瓣Top250 -->
-    <view class="list-movie top">
-      <view class="sub-title">Top250</view>
-      <view class="list-movie-wrapper">
-        <view wx:for="{{top250}}" wx:key="index" class="movie-item" id="{{item.id}}" bindtap="viewDetail">
-          <view class="item-l">
-            <image src="{{item.images.small}}"></image>
-          </view>
-          <!-- 17 -->
-          <view class="item-r">
-            <view class="item-r-detail">
-              <!-- 电影名称 -->
-              <view class="title">
-                <text>{{item.title}}</text>
-                <!-- <text class="rating">{{item.rating.average}}</text> -->
-              </view>
-              <!-- 观看量 -->
-              <view class="collect_count">
-                <text>{{item.collect_count}}</text>
-                观看过
-              </view>
-              <!-- weixin script -->
-              <wxs module="m1">
-                var starrings = function (casts) {
-                  casts = casts.map(function(cast, index) {
-                    if (casts.length - 1 !== index) {
-                      return cast.name + ' '
-                    } else {
-                      return cast.name
-                    }
-                  })
-
-                  return casts.join('')
-                }
-                module.exports.starrings = starrings
-              </wxs>
-              <!-- 主演 -->
-              <view class="casts">主演：{{m1.starrings(item.casts)}}</view>
-              <!-- 大陆上映时间 -->
-              <view class="mainland_pubdate">
-                <text>{{item.mainland_pubdate}}</text>
-              </view>
-            </view>
-          </view>
-        </view>
-      </view>
+    <list list="{{top250}}" title="Top250">
       <view class="view-more">查看全部排行榜</view>
-    </view>
+    </list>
   </view>
 </view>
