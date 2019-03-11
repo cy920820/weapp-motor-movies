@@ -2,16 +2,16 @@
 <view class="container">
   <!-- 用户头像面板 -->
   <view class="userinfo">
-    <image class="avatar" src="{{avatarUrl}}" mode="scaleToFill"></image>
-    <text class="username">{{username}}</text>
+    <view>
+      <image class="avatar" src="{{userinfo.avatarUrl}}" mode="scaleToFill"></image>
+    </view>
+    <text class="username">{{userinfo.username}}</text>
   </view>
 
   <!-- 用户功能列表 -->
-  <!-- <view class="user-feature">
-    <van-cell-group>
-      <van-cell title="想看的电影" value="{{numbers}}" is-link />
-    </van-cell-group>
-  </view> -->
+  <view class="user-feature" wx:if="{{userinfo.username}}">
+    <button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo" class="btn-getInfo">点击登录,解锁更多功能</button>
+  </view>
 
   <!-- 应用信息 -->
   <view class="app-info">

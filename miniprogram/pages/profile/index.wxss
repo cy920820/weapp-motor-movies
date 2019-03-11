@@ -14,6 +14,7 @@
   background-size: 100% 300rpx;
   background-position: center;
   text-align: center;
+  box-sizing: border-box;
 }
 
 .userinfo .avatar {
@@ -22,6 +23,7 @@
   height: 120rpx;
   border-radius: 120rpx;
   border: 6rpx solid #fff;
+  box-sizing: border-box;
 }
 
 .userinfo .username {
@@ -37,5 +39,13 @@
 
 .app-info {
   width: 100%;
-  margin-top: 30rpx;
+  margin-top: 20rpx;
+}
+
+.btn-getInfo {
+  width: 100%;
+  border-radius: 0;
+  background: #fff;
+  font-size: 30rpx;
+  color: #555;
 }
