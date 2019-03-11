@@ -19,15 +19,18 @@
 
 ## 二维码预览
 
-<image src="./media/qr.jpg" width="150" height="150" />
+<img src="./media/qr.jpg" width="150" height="150" />
 
 ## 截图
 
 马达电影助手
 
-<image src="./media/screen-shoot-1.jpg" width="150" height="300" />
-<image src="./media/screen-shoot-2.jpg" width="150" height="300" />
-<image src="./media/screen-shoot-3.jpg" width="150" height="300" />
+<figure class="third">
+  <img src="./media/screen-shoot-1.jpg" width="150" height="300" />
+  <img src="./media/screen-shoot-2.jpg" width="150" height="300" />
+  <img src="./media/screen-shoot-3.jpg" width="150" height="300" />
+</figure>
+
 
 ## 参考文档
 
