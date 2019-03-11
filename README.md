@@ -26,9 +26,9 @@
 马达电影助手
 
 <div align="center">
-  <img src="./media/screen-shoot-1.jpg" width="150" height="300" />
-  <img src="./media/screen-shoot-2.jpg" width="150" height="300" />
-  <img src="./media/screen-shoot-3.jpg" width="150" height="300" />
+  <img src="./media/screen-shoot-1.jpg" width="250" height="420" />
+  <img src="./media/screen-shoot-2.jpg" width="250" height="420" />
+  <img src="./media/screen-shoot-3.jpg" width="250" height="420" />
 </div>
 
 
