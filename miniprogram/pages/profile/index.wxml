@@ -3,13 +3,13 @@
   <!-- 用户头像面板 -->
   <view class="userinfo">
     <view>
-      <image class="avatar" src="{{userinfo.avatarUrl}}" mode="scaleToFill"></image>
+      <image class="avatar" src="{{userInfo.avatarUrl}}" mode="scaleToFill"></image>
     </view>
-    <text class="username">{{userinfo.username}}</text>
+    <text class="username">{{userInfo.nickName}}</text>
   </view>
 
   <!-- 用户功能列表 -->
-  <view class="user-feature" wx:if="{{userinfo.username}}">
+  <view class="user-feature" wx:if="{{!userInfo.nickName}}">
     <button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo" class="btn-getInfo">点击登录,解锁更多功能</button>
   </view>
 
