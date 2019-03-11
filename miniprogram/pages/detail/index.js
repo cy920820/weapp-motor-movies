@@ -1,4 +1,4 @@
-import { getMovieDetail } from '../../services/services'
+import { findMovieById } from '../../services/services'
 const app = getApp()
 
 Page({
@@ -22,11 +22,10 @@ Page({
       title: '加载中'
     })
 
-    getMovieDetail(id).then(res => {
+    findMovieById(id).then(res => {
       wx.hideLoading()
-      let detail = res.data
       this.setData({
-        detail
+        detail: res
       })
     })
     .catch(err => {

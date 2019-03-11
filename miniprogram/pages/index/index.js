@@ -1,5 +1,5 @@
 //index.js
-import { getInTheaters, getUpcomings } from '../../services/services'
+import { getMovieList } from '../../services/services'
 const app = getApp()
 
 Page({
@@ -21,8 +21,8 @@ Page({
     //   upcoming: wx.getStorageSync('upcomings')
     // })
 
-    this.getHitList(this.data.hitPage, this.data.size)
-    this.getUpcomings(this.data.upcomingPage, this.data.size)
+    this.getHitList(this.data.hitPage)
+    this.getUpcomings(this.data.upcomingPage)
   },
 
   viewDetail(event) {
@@ -33,28 +33,24 @@ Page({
   },
 
   // 获取热映列表
-  getHitList(page, size) {
+  getHitList(page) {
     if (!this.data.hitHasMore) return
     wx.showLoading({
       title: '加载中'
     })
-    return getInTheaters({
-      start: (page - 1) * size,
-      count: size,
-      city: app.data.currentCity
-    })
+    return getMovieList('in_theaters', page)
     .then(res => {
       wx.hideLoading()
-      let list = res.data.subjects
+      let list = res.subjects
       if (list.length) {
         this.setData({
           hit: this.data.hit.concat(list),
           hitPage: page
         })
-        wx.setStorage({
-          key: 'hits',
-          data: this.data.hit
-        })
+        // wx.setStorage({
+        //   key: 'hits',
+        //   data: this.data.hit
+        // })
       } else {
         this.setData({
           hitHasMore: false
@@ -68,27 +64,24 @@ Page({
   },
 
   // 获取即将上映的电影列表
-  getUpcomings(page, size) {
+  getUpcomings(page) {
     if (!this.data.upcomingHasMore) return
     wx.showLoading({
       title: '加载中'
     })
-    return getUpcomings({
-      start: (page - 1) * size,
-      count: size
-    })
+    return getMovieList('coming_soon', page)
     .then(res => {
       wx.hideLoading()
-      let list = res.data.subjects
+      let list = res.subjects
       if (list.length) {
         this.setData({
           upcoming: this.data.upcoming.concat(list),
           upcomingPage: page
         })
-        wx.setStorage({
-          key: 'upcomings',
-          data: this.data.upcoming
-        })
+        // wx.setStorage({
+        //   key: 'upcomings',
+        //   data: this.data.upcoming
+        // })
       } else {
         this.setData({
           upcomingHasMore: false
@@ -110,9 +103,9 @@ Page({
   onReachBottom() {
     // 到底之后执行loadmore
     if (this.data.tabNum === 0) {
-      this.getHitList(++this.data.hitPage, this.data.size)
+      this.getHitList(++this.data.hitPage)
     } else {
-      this.getUpcomings(++this.data.upcomingPage, this.data.size)
+      this.getUpcomings(++this.data.upcomingPage)
     }
   },
 
@@ -126,8 +119,8 @@ Page({
       upcomingHasMore: true
     })
 
-    this.getHitList(this.data.hitPage, this.data.size).then(() => {
-      this.getUpcomings(this.data.upcomingPage, this.data.size).then(() => {
+    this.getHitList(this.data.hitPage).then(() => {
+      this.getUpcomings(this.data.upcomingPage).then(() => {
         wx.stopPullDownRefresh()
       })
     })

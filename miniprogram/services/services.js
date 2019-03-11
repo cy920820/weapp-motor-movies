@@ -2,27 +2,29 @@
 import apis from './api'
 import http from '../helper/http'
 
-// 获取热映电影
-exports.getInTheaters = function(params) {
-  return http(apis.in_theaters, 'GET', params)
+/**
+ * @param {type} 类型
+ * @param {page} 页码
+ * @param {count} 分页数量
+ * @param {search} 搜索关键词
+ * @returns {Promise} 返回抓取的列表数据
+ */
+
+// 获取列表类电影
+exports.getMovieList = function(type, page = 1, count = 20, search = '') {
+  let params = {
+    start: (page - 1) * count,
+    count,
+    search: '',
+    city: getApp().data.currentCity
+  }
+
+  params = search ? Object.assign(params, { q: search }) : params
+
+  return http(apis[type], 'GET', params).then(res => res.data)
 }
 
-// 获取将要上映电影
-exports.getUpcomings = function(params) {
-  return http(apis.coming_soon, 'GET', params)
-}
-
-// 获取具体id电影条目
-exports.getMovieDetail = function(params) {
-  return http(`${apis.subject}/${params}`, 'GET')
-}
-
-// 获取新片榜列表
-exports.getNewMovies = function(params) {
-  return http(apis.new_movies, 'GET', params)
-}
-
-// 获取具体id电影条目
-exports.getTop250 = function(params) {
-  return http(apis.top250, 'GET', params)
+// 查询具体id电影条目
+exports.findMovieById = function(id) {
+  return http(`${apis.subject}/${id}`, 'GET').then(res => res.data)
 }

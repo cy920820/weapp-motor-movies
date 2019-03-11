@@ -7,7 +7,7 @@
   <view wx:if="{{new.length}}" style="width: 100%;">
     <!-- 新片榜 -->
     <list list="{{new}}" title="新片榜">
-      <view class="view-more" bindtap="viewAllList" data-type="new">查看全部排行榜</view>
+      <view class="view-more" bindtap="viewAllList" data-type="new_movies">查看全部排行榜</view>
     </list>
 
     <!-- 豆瓣Top250 -->
