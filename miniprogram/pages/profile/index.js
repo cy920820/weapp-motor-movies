@@ -4,9 +4,10 @@ let app = getApp()
 Page({
 
   data: {
-    userinfo: {},
+    userInfo: {},
     email: 'cy920820@gmail.com',
-    version: 'v1.0.0'
+    version: 'v1.0.3',
+    libVersion: 'v2.6.2'
   },
 
   onLoad: function (options) {
@@ -28,9 +29,9 @@ Page({
   },
 
   onGotUserInfo(e) {
-    let userinfo = e.detail.userInfo
+    let userInfo = e.detail.userInfo
     this.setData({
-      userinfo
+      userInfo
     })
   }
 })

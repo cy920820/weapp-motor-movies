@@ -1,6 +1,6 @@
 {
   "name": "weapp-movies",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "马达电影小程序",
   "main": "index.js",
   "scripts": {},

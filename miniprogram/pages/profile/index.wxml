@@ -16,7 +16,8 @@
   <!-- 应用信息 -->
   <view class="app-info">
     <van-cell-group>
-      <van-cell title="版本号" value="{{version}}" />
+      <van-cell title="小程序版本" value="{{version}}" />
+      <van-cell title="基础库版本" value="{{libVersion}}" />
       <van-cell title="联系作者" value="{{email}}" />
     </van-cell-group>
   </view>
