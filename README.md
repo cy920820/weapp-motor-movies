@@ -4,8 +4,8 @@
 
 ## 说明
 
-仿猫眼小程序风格开发的一款电影小程序助手
-数据来源：[douban-api-docs](https://github.com/zce/douban-api-docs)
+仿猫眼小程序风格开发的一款电影小程序助手  
+数据来源：[douban-api-docs](https://github.com/zce/douban-api-docs)
 
 ## 功能
 
@@ -25,11 +25,11 @@
 
 马达电影助手
 
-<figure class="third">
-  <img src="./media/screen-shoot-1.jpg" width="150" height="300" />
-  <img src="./media/screen-shoot-2.jpg" width="150" height="300" />
-  <img src="./media/screen-shoot-3.jpg" width="150" height="300" />
-</figure>
+<div align="left">
+  <img src="./media/screen-shoot-1.jpg" width="250" height="420" />
+  <img src="./media/screen-shoot-2.jpg" width="250" height="420" />
+  <img src="./media/screen-shoot-3.jpg" width="250" height="420" />
+</div>
 
 
 ## 参考文档
