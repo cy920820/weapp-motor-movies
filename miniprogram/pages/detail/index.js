@@ -34,14 +34,14 @@ Page({
     })
   },
 
-  preview() {
+  preview(e) {
     let photos = this.data.detail.photos
     let urls = photos.map(photo => {
       return photo.thumb
     })
 
     wx.previewImage({
-      current: urls[0], // 当前显示图片的http链接
+      current: urls[e.currentTarget.dataset.index], // 当前显示图片的http链接
       urls // 需要预览的图片http链接列表
     })
   }

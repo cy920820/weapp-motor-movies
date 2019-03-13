@@ -14,8 +14,6 @@
   module.exports.avatars = avatars
 </wxs>
 <view class="container" wx:if="{{detail.title}}">
-  <view></view>
-  <text></text>
   <view class="details-panel">
     <view class="movie-filter"></view>
     <view class="panel-bg" style="background-image: url({{detail.images.large}})"></view>
@@ -58,7 +56,7 @@
     <text class="title">视频和剧照</text>
     <scroll-view scroll-x="true" style="white-space: nowrap; display: flex; margin-top: 20rpx;">
       <!-- <video wx:key="index" wx:for="{{detail.trailers}}" src="{{item.resource_url}}" controls></video> -->
-      <view bind:tap="preview" class="actor" wx:key="index" wx:for="{{detail.photos}}">
+      <view bind:tap="preview" data-index="{{index}}" class="actor" wx:key="index" wx:for="{{detail.photos}}">
         <image mode="aspectFill" class="still" src="{{item.thumb}}"></image>
       </view>
     </scroll-view>
