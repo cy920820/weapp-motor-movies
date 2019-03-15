@@ -15,11 +15,10 @@ exports.getMovieList = function(type, page = 1, count = 20, search = '') {
   let params = {
     start: (page - 1) * count,
     count,
-    search: '',
     city: getApp().data.currentCity
   }
 
-  params = search ? Object.assign(params, { q: search }) : params
+  params = search ? Object.assign(params, { tag: search }) : params
 
   return http(apis[type], 'GET', params).then(res => res.data)
 }

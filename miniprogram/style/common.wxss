@@ -11,3 +11,5 @@ page {
   overflow: hidden;
   white-space: nowrap;
 }
+
+/* 列表样式公共部分 */

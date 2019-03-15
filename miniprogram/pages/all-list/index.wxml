@@ -1,6 +1,4 @@
-<!-- pages/chooseLib/chooseLib.wxml -->
 <view class="container">
-
   <view wx:if="{{list.length}}" style="width: 100%;">
     <!-- new || 豆瓣Top250 -->
     <list list="{{list}}"></list>

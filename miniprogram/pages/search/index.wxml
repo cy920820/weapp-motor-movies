@@ -1,15 +1,19 @@
-<!-- pages/chooseLib/chooseLib.wxml -->
 <view class="container">
   <view class="list-search" style="width: 100%;">
-    <van-search placeholder="请输入电影名称" show-action bind:focus="onFocus" />
+    <van-search
+      value="{{ searchMovie }}"
+      placeholder="请输入要搜索的电影"
+      show-action
+      bind:search="onSearch"
+      bind:cancel="onCancel"
+    />
   </view>
 
-  <view wx:if="{{new.length}}" style="width: 100%;">
+  <view wx:if="{{movies.length}}" style="width: 100%;">
     <!-- 新片榜 -->
     <view class="list-movie new">
-      <view class="sub-title">新片榜</view>
       <view class="list-movie-wrapper">
-        <view wx:for="{{new}}" wx:key="index" class="movie-item" id="{{item.id}}" bindtap="viewDetail">
+        <view wx:for="{{movies}}" wx:key="index" class="movie-item" id="{{item.id}}" bindtap="viewDetail">
           <view class="item-l">
             <image src="{{item.images.small}}"></image>
           </view>
@@ -42,7 +46,7 @@
                 module.exports.starrings = starrings
               </wxs>
               <!-- 主演 -->
-              <view class="casts">主演：{{m1.starrings(item.casts)}}</view>
+              <view class="casts ellipsis">主演：{{m1.starrings(item.casts)}}</view>
               <!-- 大陆上映时间 -->
               <view class="mainland_pubdate">
                 <text>{{item.mainland_pubdate}}</text>
@@ -51,7 +55,6 @@
           </view>
         </view>
       </view>
-      <view class="view-more">查看全部排行榜</view>
     </view>
   </view>
 </view>

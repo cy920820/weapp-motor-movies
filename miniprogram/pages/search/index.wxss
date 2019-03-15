@@ -1,6 +1,7 @@
 /* pages/chooseLib/chooseLib.wxss */
 
 @import "../../style/common.wxss";
+@import '../../pages/index/index.wxss';
 
 .list-search {
   width: 100%;

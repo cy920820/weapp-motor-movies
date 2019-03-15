@@ -10,7 +10,9 @@ let apis = {
   // 新片榜
   'new_movies': '/v2/movie/new_movies',
   // 豆瓣 top250
-  'top250': '/v2/movie/top250'
+  'top250': '/v2/movie/top250',
+  // 搜索电影
+  'search': '/v2/movie/search'
 }
 
 Object.keys(apis).forEach(key => {

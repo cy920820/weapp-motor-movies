@@ -1,4 +1,3 @@
-<!-- pages/chooseLib/chooseLib.wxml -->
 <view class="container">
   <view class="list-search" style="width: 100%;">
     <van-search placeholder="请输入电影名称" bind:focus="onFocus" />

@@ -47,13 +47,9 @@ Page({
   },
 
   onFocus() {
-    console.log('跳转搜索页面')
-  },
-
-  viewDetail(event) {
-    let id = event.currentTarget.id
+    // 跳转搜索首页
     wx.navigateTo({
-      url: `../detail/index?id=${id}`
+      url: '../search/index'
     })
   },
 

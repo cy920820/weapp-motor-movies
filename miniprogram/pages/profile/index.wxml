@@ -1,4 +1,3 @@
-<!-- pages/userConsole/userConsole.wxml -->
 <view class="container">
   <!-- 用户头像面板 -->
   <view class="userinfo">

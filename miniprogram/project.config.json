@@ -37,12 +37,26 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 2,
 			"list": [
 				{
 					"id": -1,
 					"name": "我的",
 					"pathName": "pages/profile/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "榜单",
+					"pathName": "pages/list/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "影片搜索",
+					"pathName": "pages/search/index",
 					"scene": null
 				}
 			]
