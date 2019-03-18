@@ -6,6 +6,7 @@
       show-action
       bind:search="onSearch"
       bind:cancel="onCancel"
+      focus
     />
   </view>
 

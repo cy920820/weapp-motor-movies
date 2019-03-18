@@ -1,6 +1,6 @@
 <view class="container">
-  <view class="list-search" style="width: 100%;">
-    <van-search placeholder="请输入电影名称" bind:focus="onFocus" />
+  <view class="list-search" style="width: 100%;" bindtap="onFocus">
+    <van-search disabled placeholder="请输入电影名称" />
   </view>
 
   <view wx:if="{{new.length}}" style="width: 100%;">
